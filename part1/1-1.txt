@@ -1,0 +1,4 @@
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS     NAMES
+1f717ef41f85   nginx:latest   "/docker-entrypoint.…"   31 seconds ago   Exited (0) 6 seconds ago             sharp_roentgen
+080b5b1b5183   nginx:latest   "/docker-entrypoint.…"   35 seconds ago   Up 34 seconds              80/tcp    peaceful_noether
+9863634fd723   nginx          "/docker-entrypoint.…"   40 hours ago     Exited (0) 40 hours ago              hopeful_bohr
