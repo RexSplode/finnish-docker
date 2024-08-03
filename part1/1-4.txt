@@ -1,0 +1,8 @@
+docker run -d -it --name websiter ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+docker attach websiter
+ // other terminal
+ docker exec -it websiter bash
+ apt-get update
+ apt-get install curl
+
+ // smarter way would bu to run apt-get install curl before "while true"
