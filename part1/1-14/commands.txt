@@ -1,0 +1,2 @@
+docker build . -t goappp && docker run -d -p 8080:8080 goappp
+docker build . -t front-app && docker run -d -p 8000:8000 front-app
