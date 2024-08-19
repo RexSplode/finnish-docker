@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    image: goappp
+    container_name: example-backend
+    ports:
+      - 8080:8080
+    environment:
+      - REQUEST_ORIGIN=http://localhost:8000
+      - REDIS_HOST=redis
+    depends_on:
+      redis:
+        condition: service_started
+  frontend:
+    image: front-app
+    container_name: example-frontend
+    ports:
+      - 8000:8000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080
+  redis:
+    image: redis:7.2.5
+    container_name: redis
